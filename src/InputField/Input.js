@@ -6,15 +6,15 @@ const inputField = ({handleInput, handleSaveTask, value}) => {
     <React.Fragment>
       <textarea 
         type='text'
-        rows='10'
+        rows='6'
         className='form-control'
         style={{width: '100%'}} 
         value={value}
         placeholder='Enter a task'
-        onChange={(event => handleInput(event.target.value))}
+        onChange={handleInput}
       />
       <br />
-      <Button handleClick={handleSaveTask} classNames='btn btn-sm btn-primary' text='Save'/>
+      <Button handleClick={handleSaveTask} classNames='btn btn-sm btn-primary'>Save</Button>
     </React.Fragment>
   )
 }
